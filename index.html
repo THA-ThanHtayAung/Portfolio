@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio Website</title>
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+      }
+      .nav-shadow {
+        box-shadow: 0px 0px 2px #fff;
+        backdrop-filter: blur(5px);
+      }
+      .text-shadow {
+        text-shadow: 4px 4px #000;
+      }
+      .sidebar {
+        width: 360px !important;
+        overflow: hidden;
+        margin-left: 5px;
+        margin-top: 5px;
+      }
+      .img-size {
+        width: 320px !important;
+        box-shadow: 1px 1px 2px 4px #fff, -1px -1px 0px 0px #fff;
+      }
+      .text-align {
+        text-align: justify;
+      }
+
+      @keyframes upToDown {
+        from {
+          transform: translateY(-300px);
+        }
+        to {
+          transform: translateY(0px);
+        }
+      }
+
+      .img-animate {
+        animation: upToDown 1s;
+      }
+
+      @media screen and (max-width: 1100px) and (min-width: 800px) {
+        .vh-50 {
+          height: 80vh !important;
+        }
+      }
+      @media screen and (min-width: 990px) {
+        .sidebar {
+          box-shadow: none;
+        }
+      }
+      @media (max-width: 989px) {
+        .sidebar {
+          background: linear-gradient(to right, #1b1414, #252222);
+          height: 500px;
+          box-shadow: 1px 1px 2px 2px #fff, -1px -1px 2px 2px #fff;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <!-- nav start -->
+    <nav class="navbar navbar-expand-lg nav-shadow sticky-top">
+      <div class="container">
+        <a
+          class="navbar-brand fs-4 fw-bolder text-light fst-italic text-shadow"
+          href="#home"
+          ><i class="fa-brands fa-vimeo-v fs-3 me-2"></i>Than Htay Aung</a
+        >
+        <button
+          class="navbar-toggler shadow-none border-0 bg-white"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-start bg-transparent sidebar"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header border-bottom text-white">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              Sidebar Menu
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav justify-content-center justify-content-lg-end align-items-center flex-grow-1 p-4 p-lg-0"
+            >
+              <li class="nav-item mb-3 mb-lg-0 me-lg-4">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mb-3 mb-lg-0 me-lg-4">
+                <a class="nav-link text-white" href="#about"
+                  >Services & Skill</a
+                >
+              </li>
+              <li class="nav-item mb-3 mb-lg-0 me-lg-4">
+                <a class="nav-link text-white" href="#service">Services</a>
+              </li>
+              <li class="nav-item mb-3 mb-lg-0 me-lg-4">
+                <a class="nav-link text-white" href="#freelance">Freelance</a>
+              </li>
+              <li class="nav-item mb-3 mb-lg-0 me-lg-4">
+                <a class="nav-link text-white" href="#contact"
+                  ><i class="fa fa-phone-volume me-0" aria-hidden="true"></i>
+                  Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- nav end -->
+    <!-- home section -->
+    <section id="home">
+      <div class="container-lg mt-lg-1 border-bottom text-white mb-5">
+        <div class="row min-vh-100 align-items-center text-white p-4">
+          <div class="col-lg-6 order-sm-0 p-lg-4 p-sm-2">
+            <img
+              src="./images/viper.svg"
+              alt="logo"
+              class="float-start img-animate float-lg-end rounded-4 img-size"
+            />
+          </div>
+          <div class="col-lg-6 order-lg-first mt-3 mt-sm-0">
+            <p class="text-white fs-6">
+              <span class="fs-4 fw-bold fst-italic">H</span>ello, I'm
+            </p>
+            <h1 class="fs-1 text-uppercase fw-bold text-shadow fst-italic">
+              Web Designer
+            </h1>
+            <!-- <h1 class="fs-3 text-uppercase text-shadow fst-italic">Than Htay Aung</h1> -->
+            <p class="lead text-white-50 lh-lg text-align">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequuntur quia aspernatur voluptatem tempore ullam officiis
+              odit nulla velit, ab quam molestiae fuga at laborum esse porro
+              voluptatum tenetur iste. Reiciendis?
+            </p>
+            <input
+              type="button"
+              value="My Work"
+              class="btn btn-danger btn-lg mt-4 px-4"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About -->
+    <section id="about">
+      <h2 class="text-center text-white fw-bold mb-4">About me</h2>
+      <div class="container my-4 p-4 border-bottom text-white mb-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="mb-4 fs-3">Freelancer</h3>
+            <div class="text-white-50">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim,
+                magni? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt non consequatur consequuntur? Earum culpa vel quod
+                suscipit illo voluptatibus deserunt. Excepturi minima, eveniet
+                molestiae vitae ex repudiandae aspernatur quas eius?
+              </p>
+            </div>
+            <div class="row text-center text-uppercase mt-4 py-4">
+              <div class="col-sm-4">
+                <div class="">
+                  <h3 class="fw-bold">100+</h3>
+                  <h4 class="text-white-50">Project Completed</h4>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="">
+                  <h3 class="fw-bold">90+</h3>
+                  <h4 class="text-white-50">Happy Clients</h4>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="">
+                  <h3 class="fw-bold">95+</h3>
+                  <h4 class="text-white-50">Positive Reviewers</h4>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div
+                class="col-12 d-flex align-items-center justify-content-center justify-content-sm-start"
+              >
+                <a href="#" class="btn btn-danger px-4 me-3">Download CV</a>
+                <div class="social-link text-center fs-3 align-items-center">
+                  <a href="#"
+                    ><i class="fa-brands fa-facebook-f text-white pe-3"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fa-brands fa-viber text-white pe-3"></i
+                  ></a>
+                  <a href="#"
+                    ><i class="fa-brands fa-instagram text-white pe-3"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 p-4">
+            <div class="mb-4">
+              <div>
+                <h3>HTML</h3>
+              </div>
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="75"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div
+                  class="progress-bar progress-bar-animated progress-bar-striped bg-secondary w-75"
+                >
+                  75%
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div>
+                <h3>CSS</h3>
+              </div>
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div
+                  class="progress-bar progress-bar-animated progress-bar-striped bg-secondary w-50"
+                >
+                  50%
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div>
+                <h3>JavaScript</h3>
+              </div>
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div
+                  class="progress-bar progress-bar-animated progress-bar-striped bg-secondary w-50"
+                >
+                  50%
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div>
+                <h3>BootStrap 5</h3>
+              </div>
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Basic example"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <div
+                  class="progress-bar progress-bar-animated progress-bar-striped bg-secondary w-50"
+                >
+                  50%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services -->
+    <section id="service">
+      <h2 class="text-center text-white fw-bold mb-4">What I Do?</h2>
+      <div class="container text-center mb-5">
+        <div class="row g-2 my-5">
+          <div class="col-lg-4 col-md-6">
+            <div class="project-item bg-secondary p-4">
+              <i class="fa fa-code fs-2 mb-3" aria-hidden="true"></i>
+              <h3 class="mb-4">Web Developement</h3>
+              <p class="text-white-50">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+                quia?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sequi, quia?
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="project-item bg-secondary p-4">
+              <i class="fa fa-lightbulb fs-2 mb-3" aria-hidden="true"></i>
+              <h3 class="mb-4 pb-lg-4 pt-lg-2 pt-xl-0 pb-xl-0">
+                Creative Idea
+              </h3>
+              <p class="text-white-50">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+                quia?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sequi, quia?
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="project-item bg-secondary p-4">
+              <i class="fa fa-gamepad fs-2 mb-3" aria-hidden="true"></i>
+              <h3 class="mb-4">Game Developement</h3>
+              <p class="text-white-50">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+                quia?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sequi, quia?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Project section -->
+    <section>
+      <h2 class="text-center text-white fw-bold mb-4">Latest Project</h2>
+      <div class="container my-4 py-4 border-bottom text-white">
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <img
+              src="./images/executive dashboard.avif"
+              class="img-thumbnail w-md-100 h-75 shadow-sm"
+            />
+            <h3 class="my-3">Executive Dashboard</h3>
+            <p>
+              <a href="#" class="btn btn-success">Live Demo</a>
+            </p>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <img
+              src="./images/CRM Dashboard.png"
+              class="img-thumbnail w-md-100 h-75 shadow-sm"
+            />
+            <h3 class="my-3">CRM Dashboard</h3>
+            <p>
+              <a href="#" class="btn btn-success">Live Demo</a>
+            </p>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <img
+              src="./images/Web-Analytics-Dashboard.png"
+              class="img-thumbnail w-md-100 h-75 shadow-sm"
+            />
+            <h3 class="my-3">Web Analytics Dashboard</h3>
+            <p>
+              <a href="#" class="btn btn-success">Live Demo</a>
+            </p>
+          </div>
+          <div class="col-lg-6 mb-3">
+            <img
+              src="./images/Web-Traffic-Power-BI-Dashboard-Example-Featured-Image.webp"
+              class="img-thumbnail w-md-100 h-75 shadow-sm"
+            />
+            <h3 class="my-3">Web Traffic Dashboard</h3>
+            <p>
+              <a href="#" class="btn btn-success">Live Demo</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- freelance section -->
+    <section id="freelance" class="bg-danger p-4 mb-4">
+      <div class="container text-center p-4">
+        <h2 class="fs-3 text-white-50 mb-3">Do you have any project?</h2>
+        <h1 class="mb-4">I'm available for freelance project</h1>
+        <a href="#" class="btn btn-outline-light my-3">Contact me</a>
+      </div>
+    </section>
+
+    <!-- member section -->
+    <section class="mb-4">
+      <h2 class="text-center text-white fw-bold mb-4">Our Team Member</h2>
+      <div class="container border-bottom text-white">
+        <div
+          id="carouselExampleDark"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item px-2 py-5 active">
+              <div class="d-flex align-items-center col-lg-8 m-auto">
+                <img
+                  src="./images/IMG_20230919_142231_257-removebg-preview.png"
+                  class="img-thumbnail rounded-circle"
+                  width="100px"
+                  height="100px"
+                />
+                <div class="ms-4">
+                  <h3 class="fs-4">Hsu Yoon</h3>
+                  <p class="fs-5">Senior FullStack Developer</p>
+                </div>
+              </div>
+              <div class="col-lg-8 m-auto mt-2">
+                <p class="text-white-50 fs-6">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
+                  quidem veniam amet pariatur vel, consectetur voluptatum culpa
+                  ipsa aut rem!
+                </p>
+                <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item px-2 py-5">
+              <div class="d-flex align-items-center col-lg-8 m-auto">
+                <img
+                  src="./images/IMG_20230919_142231_257-removebg-preview.png"
+                  class="img-thumbnail rounded-circle"
+                  width="100px"
+                  height="100px"
+                />
+                <div class="ms-2">
+                  <h3 class="fs-4">Evelyn</h3>
+                  <p class="fs-5">Senior Web Developer</p>
+                </div>
+              </div>
+              <div class="col-lg-8 m-auto mt-2">
+                <p class="text-white-50 fs-6">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
+                  quidem veniam amet pariatur vel, consectetur voluptatum culpa
+                  ipsa aut rem!
+                </p>
+                <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item px-2 py-5">
+              <div class="d-flex align-items-center col-lg-8 m-auto">
+                <img
+                  src="./images/IMG_20230919_142231_257-removebg-preview.png"
+                  class="img-thumbnail rounded-circle"
+                  width="100px"
+                  height="100px"
+                />
+                <div class="ms-2">
+                  <h3 class="fs-4">Hsu Yoon Nadi Aung</h3>
+                  <p class="fs-5">Senior FullStack Developer</p>
+                </div>
+              </div>
+              <div class="col-lg-8 m-auto mt-2">
+                <p class="text-white-50 fs-6">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
+                  quidem veniam amet pariatur vel, consectetur voluptatum culpa
+                  ipsa aut rem!
+                </p>
+                <p>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section -->
+    <section id="contact" class="mb-5">
+      <h2 class="text-center text-white fw-bold mb-4">Contact Me</h2>
+      <div class="container p-4 m-4 m-auto">
+        <div class="row">
+          <!-- left side content -->
+          <div class="col-lg-5 col-md-6 p-xl-5 p-md-0 pt-0 p-3">
+            <div class="contact-item d-flex align-items-center mb-4">
+              <div class="icon">
+                <i class="fa fa-envelope fs-3 mb-0"></i>
+              </div>
+              <div class="text ms-3">
+                <div class="fs-5">Email</div>
+                <div class="text-white-50">thanhtayaung@globalta.com.mm</div>
+              </div>
+            </div>
+            <div class="contact-item d-flex align-items-center mb-4">
+              <div class="icon">
+                <i class="fa fa-phone-volume fs-3 mb-0"></i>
+              </div>
+              <div class="text ms-3">
+                <div class="fs-5">Phone</div>
+                <div class="text-white-50">+95 963 950 107</div>
+              </div>
+            </div>
+            <div class="contact-item d-flex align-items-center mb-4">
+              <div class="icon">
+                <i class="fa fa-map-location fs-3 mb-0"></i>
+              </div>
+              <div class="text ms-3">
+                <div class="fs-5">Address</div>
+                <div class="text-white-50">Thingyangung, Yangon</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- right side content -->
+          <div class="col-lg-7 col-md-6">
+            <div class="contact-form">
+              <form action="#">
+                <div class="row">
+                  <div class="col-lg-6 mb-4">
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      class="form-control form-control-lg border-0 fs-6"
+                    />
+                  </div>
+                  <div class="col-lg-6 mb-4">
+                    <input
+                      type="email"
+                      placeholder="Your Email"
+                      class="form-control form-control-lg border-0 fs-6"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Subject"
+                      class="form-control form-control-lg border-0 fs-6"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div>
+                    <textarea
+                      cols="30"
+                      rows="10"
+                      placeholder="Your message"
+                      class="form-control form-control-lg border-0 fs-6"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="">
+                    <a href="#" class="btn btn-danger">Send message</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer section -->
+    <section class="border-top text-white mt-5">
+      <div class="container my-4 text-center py-3">
+        <p class="mb-0">
+          <i class="fa fa-copyright" aria-hidden="true"></i> Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Perferendis, tenetur!
+        </p>
+      </div>
+    </section>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</html>
